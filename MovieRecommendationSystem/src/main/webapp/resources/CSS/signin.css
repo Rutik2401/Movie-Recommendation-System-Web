@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.container1 {
+	background-attachment: fixed;
+	/* background-image: url("../Images/loginbackground.jpg"); */
+	background-size: contain;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 3000px rgba(107, 102, 108, 0.4) inset;
+}
+
+form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sign-section {
+	width: 50vw;
+	/* width: clamp(40vw,50vw,80vw); */
+	height: auto;
+	padding-top: 3.5rem;
+	padding-bottom: 3.5rem;
+	border-radius: 0.9rem;
+	background: rgb(157, 22, 22);
+}
+
+.sign-section .input-group {
+	width: 50%;
+	width: clamp(8rem, 14.5rem, 17rem);
+}
+
+.btn {
+	width: 30%;
+}
+
+.desc-section {
+	width: 50%;
+	height: 100%;
+}
+
+.desc-section .info {
+	width: 42%;
+	text-align: center;
+}
+
+.ref-register a:hover {
+	text-decoration: underline;
+}
+
+@media ( max-width :768px) {
+	.ref-register {
+		flex-direction: column;
+	}
+	.sign-section {
+		width: clamp(50vw, 70vw, 80vw);
+	}
+}

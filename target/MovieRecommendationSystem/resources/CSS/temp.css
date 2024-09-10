@@ -1,0 +1,12 @@
+
+.c
+ {
+ background-color: red;
+ }
+h1 {
+    color: blue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: yellow;
+    padding: 10px;
+}

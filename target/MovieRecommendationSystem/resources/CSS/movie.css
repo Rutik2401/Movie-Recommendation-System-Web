@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* overflow-x: hidden; */
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.Sub-Conatiner {
+	width: 100%;
+}
+
+.container-flu {
+	width: 86%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Navbar {
+	/* background: linear-gradient(90deg, #3852d4, #3c4055be); */
+	background-color: rgb(246, 246, 246);
+	height: 5rem;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.logo p {
+	font-size: clamp(1rem, 5vw, 1.5rem);
+}
+
+.main-card {
+	height: auto;
+	position: relative;
+	/* Ensure the overlay is positioned correctly */
+	width: 100%;
+	margin: 0 auto;
+	background-color: #1A1A1A;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	/* Prevent overlay from spilling outside the card */
+}
+
+.main-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(./image.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	filter: blur(15px) !important;;
+	/* Apply grayscale filter */
+	filter: grayscale(20%);
+	z-index: 1;
+	/* Ensure the overlay is behind other content */
+}
+
+.main-card>* {
+	position: relative;
+	z-index: 2;
+	/* Ensure the content is above the grayscale overlay */
+}
+
+.all-content {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	width: 86%;
+	display: flex;
+	justify-content: start;
+	gap: 5rem;
+}
+
+.movie {
+	border-radius: 0.7rem;
+	height: 25rem;
+	width: 23vw;
+	min-width: 16rem;
+	display: flex;
+	justify-content: start;
+}
+
+.movie a {
+	width: auto;
+	border-radius: 0.7rem;
+	height: 100%;
+}
+
+.movie a img {
+	border-radius: 0.7rem;
+	object-fit: fill;
+	height: 100%;
+	width: 18rem;
+	width: clamp(18rem, 20vw, 19rem);
+}
+
+.movie-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.movie-info {
+	gap: 0.8rem;
+}
+
+.MovieName {
+	/* font-size: 2.5vw; */
+	font-size: clamp(2.9vw + 1.2rem, 2.9vw, 3vw);
+}
+
+/* Tablet */
+@media ( min-width : 320px) and (max-width: 550px) {
+	.all-content {
+		flex-direction: column;
+	}
+	.movie {
+		margin: 0 auto;
+	}
+	.all-content {
+		gap: 2rem;
+	}
+	.movie-info {
+		gap: 0.6rem;
+	}
+}
+
+.about {
+	padding-top: 1rem;
+	width: 86vw;
+	margin: 0 auto;
+}
+
+.about p {
+	width: 75vw;
+}
+.star {
+    font-size: 2rem;
+    color: gray; /* Default color for unselected stars */
+    cursor: pointer;
+}
+
+.star.selected {
+    color: gold; /* Color for selected stars */
+}
+
